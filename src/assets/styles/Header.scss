@@ -1,0 +1,27 @@
+@import "../utils/Colors.scss";
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  padding: 0.75rem;
+  background-color: $header-color;
+  border-bottom: 1px solid $accent-color;
+}
+
+header ul {
+  display: flex;
+  color: red;
+  list-style-type: none;
+}
+
+header img {
+  height: 3.75rem;
+  margin: 4px;
+  &:hover {
+    filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.4));
+  }
+}

@@ -1,0 +1,17 @@
+@import "../utils/Colors.scss";
+
+button {
+  background-color: $button-color;
+  color: $primary-color;
+  border: none;
+  padding: 10px 20px;
+  margin: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.4));
+    background-color: $primary-color;
+    color: $button-color;
+  }
+}
