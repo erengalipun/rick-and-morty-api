@@ -10,18 +10,12 @@ header {
   padding: 0.75rem;
   background-color: $header-color;
   border-bottom: 1px solid $accent-color;
-}
 
-header ul {
-  display: flex;
-  color: red;
-  list-style-type: none;
-}
-
-header img {
-  height: 3.75rem;
-  margin: 4px;
-  &:hover {
-    filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.4));
+  img {
+    height: 3.75rem;
+    margin: 4px;
+    &:hover {
+      filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.4));
+    }
   }
 }

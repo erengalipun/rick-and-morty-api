@@ -1,0 +1,40 @@
+@import "../utils/Colors.scss";
+
+.not-found {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 88vh;
+  width: 96%;
+
+  h1,
+  h4,
+  p {
+    margin-bottom: 1rem;
+    background: linear-gradient(
+      315deg,
+      $accent-color 0%,
+      $secondary-color 100%
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  img {
+    width: 20rem;
+    height: 20rem;
+    transform: skew(-45deg, 15deg) rotate(0deg);
+    filter: drop-shadow(8px 8px 40px $accent-color);
+    z-index: -1;
+    animation: rotating 60s linear infinite;
+  }
+
+  @keyframes rotating {
+    from {
+      -webkit-transform: skew(-45deg, 15deg) rotate(0deg);
+    }
+    to {
+      -webkit-transform: skew(-45deg, 15deg) rotate(360deg);
+    }
+  }
+}
