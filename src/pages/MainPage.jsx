@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "../components/Header";
-import Content from "../components/Content";
+import MainContent from "../components/MainContent";
 
 function MainPage() {
   return (
     <>
       <Header />
-      <Content />
+      <MainContent />
     </>
   );
 }

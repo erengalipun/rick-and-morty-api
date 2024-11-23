@@ -1,10 +1,10 @@
 import React from "react";
-import "../assets/styles/Content.scss";
+import "../assets/styles/MainContent.scss";
 
-function Content() {
+function MainContent() {
   return (
-    <div className="content">
-      <div className="content-banner">
+    <div className="main-content">
+      <div className="main-content-banner">
         <div>
           <h1>The Rick and Morty API</h1>
           <h4>
@@ -22,4 +22,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default MainContent;

@@ -1,0 +1,43 @@
+@import "../utils/Colors.scss";
+
+.filter-panel {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  height: 100vh;
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: 0 0.4rem;
+
+  h2 {
+    margin: 0.8rem 0;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid $primary-color;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.4rem;
+
+    label {
+      margin-bottom: 0.4rem;
+      font-weight: bold;
+    }
+
+    input[type="search"],
+    select {
+      padding: 0.4rem;
+      width: 8.8rem;
+      border: 1px solid $accent-color;
+      border-radius: 4px;
+      background-color: $primary-color;
+      color: $secondary-color;
+
+      &:focus {
+        background-color: $input-color;
+        outline: none;
+      }
+    }
+  }
+}

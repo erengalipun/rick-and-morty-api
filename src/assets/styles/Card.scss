@@ -1,0 +1,25 @@
+@import "../utils/Colors.scss";
+
+.card {
+  display: flex;
+  min-width: 25rem;
+  height: 12.5rem;
+  background-color: $primary-color;
+  margin: 1rem;
+  border-left: 10px solid $header-color;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px 2px $button-color;
+
+  img {
+    height: 12.5rem;
+    width: 12.5rem;
+  }
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+  margin-left: 0.4rem;
+}

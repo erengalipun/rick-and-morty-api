@@ -4,14 +4,14 @@ button {
   background-color: $button-color;
   color: $primary-color;
   border: 1px solid $accent-color;
-  padding: 10px 20px;
-  margin: 4px;
-  border-radius: 5px;
+  padding: 0.625rem 1.25rem;
+  margin: 0.4rem;
+  border-radius: 4px;
   cursor: pointer;
 
   &:hover {
     filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.4));
-    background-color: $primary-color;
+    background-color: $input-color;
     color: $button-color;
   }
 }

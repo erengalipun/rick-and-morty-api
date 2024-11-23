@@ -1,0 +1,16 @@
+@import "../utils/Colors.scss";
+@import "./FilterPanel.scss";
+
+.filter-dropdown {
+  display: flex;
+  align-items: flex-start;
+  position: fixed;
+  top: 5rem;
+  left: -10rem;
+  transition: transform 0.3s ease-in-out;
+  z-index: 998;
+
+  &.open {
+    transform: translateX(10rem);
+  }
+}

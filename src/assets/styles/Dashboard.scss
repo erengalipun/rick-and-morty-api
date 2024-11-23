@@ -1,0 +1,22 @@
+@import "../utils/Colors.scss";
+
+.dashboard {
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  background-color: $primary-color;
+  top: 5rem;
+
+  .card-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  font-weight: 600;
+  color: $secondary-color;
+}
