@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../assets/styles/PageUp.scss";
 
 function PageUp() {
   const [visible, setVisible] = useState(false);

@@ -1,22 +1,29 @@
 import React from "react";
-import logo from "../assets/images/e9u.png";
 import "../assets/styles/Card.scss";
 
-function Card() {
+function Card({ char }) {
   return (
     <div className="card">
-      <img src={logo} alt="Character" />
+      <img src={char.image} alt="Character" />
       <div className="card-content">
-        <h1>Character Name</h1>
-        <h3>
-          <span>Icon|</span>Character Status
-        </h3>
-        <label>
-          Gender: <span>M/F/U</span>
-        </label>
-        <label>
-          Location: <span>Earth</span>
-        </label>
+        <div>
+          <h1>{char.name}</h1>
+          <h3>
+            <span>Status: </span>
+            {char.status}
+          </h3>
+        </div>
+        <section>
+          <label>
+            Species: <span>{char.species}</span>
+          </label>
+          <label>
+            Gender: <span>{char.gender}</span>
+          </label>
+          <label>
+            Origin Location: <span>{char.origin.name}</span>
+          </label>
+        </section>
       </div>
     </div>
   );

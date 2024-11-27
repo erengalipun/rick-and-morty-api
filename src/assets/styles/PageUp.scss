@@ -1,1 +1,8 @@
 @import "../utils/Colors.scss";
+
+.page-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}

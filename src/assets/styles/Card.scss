@@ -21,5 +21,14 @@
   flex-direction: column;
   gap: 0.5rem;
   text-align: left;
-  margin-left: 0.4rem;
+  margin-left: 0.8rem;
+
+  div {
+    margin: 0.8rem 0;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+  }
 }
