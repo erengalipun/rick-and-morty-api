@@ -28,7 +28,7 @@ function PageUp() {
       style={{ display: visible ? "inline" : "none" }}
       className="page-up"
     >
-      <span class="material-symbols-outlined">arrow_upward</span>
+      <span className="material-symbols-outlined">arrow_upward</span>
     </button>
   );
 }

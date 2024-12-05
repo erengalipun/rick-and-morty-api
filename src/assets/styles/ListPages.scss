@@ -1,0 +1,9 @@
+@import "../utils/Colors.scss";
+
+.list-pages {
+  position: relative;
+  text-align: center;
+  min-height: 88vh;
+  background-color: $primary-color;
+  top: 5rem;
+}

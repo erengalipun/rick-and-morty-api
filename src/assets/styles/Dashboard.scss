@@ -3,7 +3,7 @@
 .dashboard {
   position: relative;
   text-align: center;
-  height: 100vh;
+  min-height: 88vh;
   background-color: $primary-color;
   top: 5rem;
 
@@ -15,40 +15,20 @@
 }
 
 .title {
-  margin-bottom: 1rem;
+  padding: 1rem 0;
   font-size: 4rem;
   font-weight: 600;
   color: $secondary-color;
 }
 
-.pagination {
+.info {
   display: flex;
+  position: relative;
+  top: 5rem;
   justify-content: center;
-  list-style-type: none;
-  padding: 0.8rem 0;
-
-  li {
-    background-color: $input-color;
-    border: 1px solid $secondary-color;
-    border-radius: 4px;
-    padding: 4px 8px;
-    margin: 0 10px;
-    font-weight: bold;
-
-    &.active {
-      background-color: $accent-color;
-      color: $primary-color;
-    }
-
-    &.disabled,
-    &.break {
-      pointer-events: none;
-      opacity: 50%;
-    }
-
-    &:hover {
-      cursor: pointer;
-      background-color: $button-color;
-    }
-  }
+  align-items: center;
+  padding: 1rem 0;
+  font-size: 4rem;
+  font-weight: 600;
+  color: $secondary-color;
 }

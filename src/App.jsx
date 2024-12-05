@@ -4,8 +4,8 @@ import CharPage from "./pages/CharPage.jsx";
 import EpiPage from "./pages/EpiPage.jsx";
 import LocPage from "./pages/LocPage.jsx";
 import MainPage from "./pages/MainPage.jsx";
-import "./App.scss";
 import NotFound from "./pages/NotFound.jsx";
+import "./App.scss";
 
 function App() {
   return (

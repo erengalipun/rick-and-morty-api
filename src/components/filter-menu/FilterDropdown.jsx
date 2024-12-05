@@ -5,7 +5,7 @@ import EpiFilterPanel from "./panels/EpiFilterPanel.jsx";
 import LocFilterPanel from "./panels/LocFilterPanel.jsx";
 import "../../assets/styles/FilterDropdown.scss";
 
-function FilterDropdown() {
+function FilterDropdown({ updateFilters }) {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
@@ -17,7 +17,7 @@ function FilterDropdown() {
     const filterPanels = {
       "/locpage": <LocFilterPanel />,
       "/epipage": <EpiFilterPanel />,
-      "/charpage": <CharFilterPanel />,
+      "/charpage": <CharFilterPanel updateFilters={updateFilters} />,
     };
 
     return filterPanels[location.pathname] || null;

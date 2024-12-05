@@ -1,70 +1,70 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-import ReactPaginate from "react-paginate";
+import { useSearchParams } from "react-router-dom";
 import FilterDropdown from "./filter-menu/FilterDropdown";
 import Card from "./Card";
 import PageUp from "./PageUp";
+import Pagination from "./Pagination.jsx";
+import { fetchChar } from "../api.js";
 import "../assets/styles/Dashboard.scss";
 
 function Dashboard() {
   const [char, setChar] = useState([]);
+  const [filteredChar, setFilteredChar] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [pageInfo, setPageInfo] = useState({});
   const [currentPage, setCurrentPage] = useState(0);
-  const [currentPageUrl, setCurrentPageUrl] = useState(
-    "https://rickandmortyapi.com/api/character"
-  );
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
-    fetchChar(currentPageUrl);
-  }, [currentPageUrl]);
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const filters = Object.fromEntries(searchParams.entries());
+        const data = await fetchChar(currentPage + 1, filters);
+        setChar(data.results);
+        setFilteredChar(data.results);
+        setPageInfo(data.info);
+      } catch (error) {
+        setError(true);
+        console.error("Error fetching characters:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const fetchChar = async (url) => {
-    setLoading(true);
-    try {
-      const response = await axios.get(url);
-      setChar(response.data.results);
-      setPageInfo(response.data.info);
-      setLoading(false);
-    } catch (error) {
-      console.error("Error fetching characters", error);
-      setLoading(false);
-    }
-  };
+    fetchData();
+  }, [currentPage, searchParams]);
 
   const handlePageChange = (data) => {
-    const selectedPage = data.selected;
-    setCurrentPage(selectedPage);
-    const newUrl = `https://rickandmortyapi.com/api/character?page=${
-      selectedPage + 1
-    }`;
-    setCurrentPageUrl(newUrl);
+    setCurrentPage(data.selected);
+  };
+
+  const updateFilters = (filters) => {
+    setSearchParams(filters);
   };
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <span className="info">Loading...</span>;
+  }
+
+  if (error) {
+    return <span className="info">No results found.</span>;
   }
 
   return (
     <div className="dashboard">
       <span className="title">Characters</span>
-      <FilterDropdown />
+      <FilterDropdown updateFilters={updateFilters} />
       <div className="card-grid">
-        {char.map((char) => (
+        {filteredChar.map((char) => (
           <Card key={char.id} char={char} />
         ))}
       </div>
-      <ReactPaginate
-        pageCount={pageInfo.pages}
-        onPageChange={handlePageChange}
-        pageRangeDisplayed={5}
-        marginPagesDisplayed={2}
-        previousLabel="< Previous"
-        nextLabel="Next >"
-        containerClassName="pagination"
-        activeClassName="active"
-        forcePage={currentPage}
-        disabledClassName="disabled"
+      <Pagination
+        handlePageChange={handlePageChange}
+        pageInfo={pageInfo}
+        currentPage={currentPage}
       />
       <PageUp />
     </div>

@@ -1,0 +1,33 @@
+@import "../utils/Colors.scss";
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0.8rem 0;
+
+  li {
+    background-color: $input-color;
+    border: 1px solid $secondary-color;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin: 0 10px;
+    font-weight: bold;
+
+    &.active {
+      background-color: $accent-color;
+      color: $primary-color;
+    }
+
+    &.disabled,
+    &.break {
+      pointer-events: none;
+      opacity: 50%;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $button-color;
+    }
+  }
+}
