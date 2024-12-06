@@ -10,10 +10,10 @@
   width: 28rem;
   margin: 0.4rem 0;
   padding: 0.4rem 0.8rem;
-  background-color: $primary-color;
-  border-left: 10px solid $header-color;
+  background-color: var(--primary-color);
+  border-left: 10px solid var(--header-color);
   border-radius: 4px;
-  box-shadow: 2px 2px 4px 2px $button-color;
+  box-shadow: 2px 2px 4px 2px var(--button-color);
 }
 
 .list-field {

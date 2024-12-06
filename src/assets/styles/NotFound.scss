@@ -13,8 +13,8 @@
     margin-bottom: 1rem;
     background: linear-gradient(
       315deg,
-      $accent-color 0%,
-      $secondary-color 100%
+      var(--accent-color) 0%,
+      var(--secondary-color) 100%
     );
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -24,7 +24,7 @@
     width: 20rem;
     height: 20rem;
     transform: skew(-45deg, 15deg) rotate(0deg);
-    filter: drop-shadow(8px 8px 40px $accent-color);
+    filter: drop-shadow(8px 8px 40px var(--accent-color));
     z-index: -1;
     animation: rotating 60s linear infinite;
   }

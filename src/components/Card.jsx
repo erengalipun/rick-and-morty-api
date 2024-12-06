@@ -1,27 +1,27 @@
 import React from "react";
 import "../assets/styles/Card.scss";
 
-function Card({ char }) {
+function Card({ data }) {
   return (
     <div className="card">
-      <img src={char.image} alt="Character" />
+      <img src={data.image} alt="Character" />
       <div className="card-content">
         <div>
-          <h1>{char.name}</h1>
+          <h1>{data.name}</h1>
           <h3>
             <span>Status: </span>
-            {char.status}
+            {data.status}
           </h3>
         </div>
         <section>
           <label>
-            Species: <span>{char.species}</span>
+            Species: <span>{data.species}</span>
           </label>
           <label>
-            Gender: <span>{char.gender}</span>
+            Gender: <span>{data.gender}</span>
           </label>
           <label>
-            Origin Location: <span>{char.origin.name}</span>
+            Origin Location: <span>{data.origin.name}</span>
           </label>
         </section>
       </div>

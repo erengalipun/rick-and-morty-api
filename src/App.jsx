@@ -5,11 +5,13 @@ import EpiPage from "./pages/EpiPage.jsx";
 import LocPage from "./pages/LocPage.jsx";
 import MainPage from "./pages/MainPage.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import { useTheme } from "./ThemeContext.jsx";
 import "./App.scss";
 
 function App() {
+  const { isLight } = useTheme();
   return (
-    <div className="App">
+    <div className={`App ${isLight ? "light-mode" : "dark-mode"}`}>
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/charpage" element={<CharPage />} />

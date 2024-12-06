@@ -4,11 +4,11 @@
   display: flex;
   min-width: 25rem;
   height: 12.5rem;
-  background-color: $primary-color;
+  background-color: var(--primary-color);
   margin: 1rem;
-  border-left: 10px solid $header-color;
+  border-left: 10px solid var(--header-color);
   border-radius: 4px;
-  box-shadow: 2px 2px 4px 2px $button-color;
+  box-shadow: 2px 2px 4px 2px var(--button-color);
 
   img {
     height: 12.5rem;

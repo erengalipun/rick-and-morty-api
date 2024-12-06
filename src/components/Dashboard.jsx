@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import FilterDropdown from "./filter-menu/FilterDropdown";
-import Card from "./Card";
-import PageUp from "./PageUp";
+import FilterDropdown from "./filter-menu/FilterDropdown.jsx";
+import Card from "./Card.jsx";
+import PageUp from "./PageUp.jsx";
 import Pagination from "./Pagination.jsx";
 import { fetchChar } from "../api.js";
 import "../assets/styles/Dashboard.scss";
@@ -45,20 +45,28 @@ function Dashboard() {
   };
 
   if (loading) {
-    return <span className="info">Loading...</span>;
+    return (
+      <div className="dashboard">
+        <span className="title">Loading...</span>
+      </div>
+    );
   }
 
   if (error) {
-    return <span className="info">No results found.</span>;
+    return (
+      <div className="dashboard">
+        <span className="title">No results found.</span>
+      </div>
+    );
   }
 
   return (
     <div className="dashboard">
-      <span className="title">Characters</span>
       <FilterDropdown updateFilters={updateFilters} />
+      <span className="title">Characters</span>
       <div className="card-grid">
         {filteredChar.map((char) => (
-          <Card key={char.id} char={char} />
+          <Card key={char.id} data={char} />
         ))}
       </div>
       <Pagination

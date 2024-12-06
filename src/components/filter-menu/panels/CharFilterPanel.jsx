@@ -35,6 +35,12 @@ function CharFilterPanel({ updateFilters }) {
     updateFilters(query);
   };
 
+  const handleEnterKey = (e) => {
+    if (e.key === "Enter") {
+      handleApplyFilters();
+    }
+  };
+
   return (
     <div className="filter-panel">
       <h2>Filter</h2>
@@ -47,6 +53,7 @@ function CharFilterPanel({ updateFilters }) {
           onChange={(e) => {
             handleChange("name", e.target.value);
           }}
+          onKeyDown={handleEnterKey}
         />
       </div>
       <div className="filter-status">

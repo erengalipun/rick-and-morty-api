@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import DarkMode from "./DarkMode";
 import "../assets/styles/Header.scss";
 import "../assets/styles/Button.scss";
 import logo from "../assets/images/logo.svg";
@@ -22,6 +23,7 @@ function Header() {
         <Link to="/epipage">
           <button>Episodes</button>
         </Link>
+        <DarkMode />
       </nav>
     </header>
   );

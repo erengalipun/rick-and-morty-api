@@ -15,8 +15,8 @@ function FilterDropdown({ updateFilters }) {
 
   const renderFilterPanel = () => {
     const filterPanels = {
-      "/locpage": <LocFilterPanel />,
-      "/epipage": <EpiFilterPanel />,
+      "/locpage": <LocFilterPanel updateFilters={updateFilters} />,
+      "/epipage": <EpiFilterPanel updateFilters={updateFilters} />,
       "/charpage": <CharFilterPanel updateFilters={updateFilters} />,
     };
 

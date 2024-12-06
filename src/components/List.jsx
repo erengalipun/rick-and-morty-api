@@ -12,8 +12,8 @@ function List({ data, fields }) {
 
   return (
     <div className="list">
-      {data.map((item, index) => (
-        <div key={index} className="list-item">
+      {data.map((item) => (
+        <div key={item.id} className="list-item">
           {fields.map((field) => (
             <div key={field} className="list-field">
               <h4 className="field-label">{capitalize(field)}: </h4>

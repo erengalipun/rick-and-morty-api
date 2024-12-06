@@ -1,9 +1,9 @@
 @import "../utils/Colors.scss";
 
 button {
-  background-color: $button-color;
-  color: $primary-color;
-  border: 1px solid $accent-color;
+  background-color: var(--button-color);
+  color: var(--primary-color);
+  border: 1px solid var(--accent-color);
   padding: 0.625rem 1.25rem;
   margin: 0.4rem;
   border-radius: 4px;
@@ -11,7 +11,14 @@ button {
 
   &:hover {
     filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.4));
-    background-color: $input-color;
-    color: $button-color;
+    background-color: var(--input-color);
+    color: var(--button-color);
   }
+}
+
+.icon-reset {
+  font-size: 15px;
+  line-height: 1;
+  vertical-align: middle;
+  display: inline-block;
 }

@@ -9,8 +9,8 @@ header {
   height: 5rem;
   width: 100%;
   padding: 0.75rem;
-  background-color: $header-color;
-  border-bottom: 1px solid $accent-color;
+  background-color: var(--header-color);
+  border-bottom: 1px solid var(--accent-color);
   z-index: 999;
 
   img {
