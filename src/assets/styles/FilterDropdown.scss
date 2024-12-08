@@ -12,4 +12,12 @@
   &.open {
     transform: translateX(10rem);
   }
+
+  @media (max-width: 768px) {
+    top: 5.2rem;
+  }
+
+  @media (max-width: 480px) {
+    top: 5.4rem;
+  }
 }

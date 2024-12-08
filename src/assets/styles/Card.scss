@@ -14,6 +14,30 @@
     height: 12.5rem;
     width: 12.5rem;
   }
+
+  @media (max-width: 768px) {
+    .card {
+      width: 20rem;
+      height: 10rem;
+      margin: 0.7rem;
+    }
+    img {
+      height: 10rem;
+      width: 10rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card {
+      width: 16rem;
+      height: 8rem;
+      margin: 0.4rem;
+    }
+    img {
+      height: 8rem;
+      width: 8rem;
+    }
+  }
 }
 
 .card-content {
@@ -30,5 +54,27 @@
   section {
     display: flex;
     flex-direction: column;
+  }
+
+  @media (max-width: 768px) {
+    .card-content {
+      gap: 0.4rem;
+      margin-left: 0.6rem;
+    }
+
+    div {
+      margin: 0.6rem 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card-content {
+      gap: 0.2rem;
+      margin-left: 0.4rem;
+    }
+
+    div {
+      margin: 0.4rem 0;
+    }
   }
 }

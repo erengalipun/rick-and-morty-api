@@ -20,4 +20,21 @@ header {
       filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.4));
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 0.6rem;
+    img {
+      height: 2.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.4rem;
+    justify-content: center;
+    img {
+      height: 2rem;
+    }
+  }
 }

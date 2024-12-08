@@ -31,4 +31,24 @@
       background-color: var(--button-color);
     }
   }
+
+  @media (max-width: 768px) {
+    .pagination {
+      padding: 0.6rem 0;
+    }
+    li {
+      padding: 3px 6px;
+      margin: 0 7px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .pagination {
+      padding: 0.4rem 0;
+    }
+    li {
+      padding: 2px 4px;
+      margin: 0 4px;
+    }
+  }
 }

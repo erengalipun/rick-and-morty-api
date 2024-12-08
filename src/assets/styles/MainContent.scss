@@ -5,9 +5,9 @@
   flex-direction: column;
   justify-content: center;
   background-image: url("../images/bg-light.jpg");
-  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 
   div {
     margin-left: 4rem;
@@ -24,6 +24,29 @@
     line-height: 1.25;
     text-align: justify;
     word-break: break-word;
+  }
+
+  @media (max-width: 768px) {
+    h1,
+    h4 {
+      text-align: center;
+      margin-bottom: 0.8rem;
+      max-width: 62vh;
+      color: var(--secondary-color);
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 calc(0.8rem + 1vw);
+    }
+  }
+
+  @media (max-width: 480px) {
+    div {
+      margin: 0 calc(0.4rem + 1vw);
+    }
   }
 }
 

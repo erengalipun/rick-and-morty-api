@@ -12,6 +12,18 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @media (max-width: 768px) {
+    .card-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }
 
 .title {
@@ -19,4 +31,14 @@
   font-size: 4rem;
   font-weight: 600;
   color: var(--secondary-color);
+
+  @media (max-width: 768px) {
+    padding: 0.8rem 0;
+    font-size: 3.6rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.6rem 0;
+    font-size: 3.2rem;
+  }
 }
